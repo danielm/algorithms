@@ -1,6 +1,8 @@
 
 // BigO: O(sqrt(N))
 
+// We choose sqrt(N) because is the only way we can change from non-linear running
+
 pub fn two_crystal_balls(haystack: &[bool]) -> Option<usize> {
     // Note: We asume the array is long enougth to have an sqrt: (1 for 3)
     let jump = (haystack.len() as f64).sqrt().floor() as usize;

@@ -5,6 +5,7 @@ mod day1;
 use day1::linear_search_list::linear_search;
 use day1::binary_search_list::binary_search;
 use day1::two_crystal_balls::two_crystal_balls;
+use day1::bubble_sort::bubble_sort;
 
 fn main() {
     println!("Just run `cargo test` bro");
@@ -53,5 +54,16 @@ fn two_crystal_balls_test() {
         bool_array[i] = false;
     }
     assert_eq!(two_crystal_balls(&bool_array), None);
+}
+
+#[test]
+fn bubble_sort_test() {
+    let mut input = [9, 3, 7, 4, 69, 420, 42];
+
+    let result = [3, 4, 7, 9, 42, 69, 420];
+
+    bubble_sort(&mut input);
+
+    assert_eq!(input, result);
 }
 

@@ -1,7 +1,10 @@
+use rand::Rng;
+
 mod day1;
 
 use day1::linear_search_list::linear_search;
 use day1::binary_search_list::binary_search;
+use day1::two_crystal_balls::two_crystal_balls;
 
 fn main() {
     println!("Just run `cargo test` bro");
@@ -32,5 +35,23 @@ fn binary_search_test() {
     assert_eq!(binary_search(&owo, 69421), false);
     assert_eq!(binary_search(&owo, 1), true);
     assert_eq!(binary_search(&owo, 0), false);
+}
+
+#[test]
+fn two_crystal_balls_test() {
+    let mut bool_array = [false; 10000];
+
+    let mut rng = rand::thread_rng();
+    let idx = rng.gen_range(0..bool_array.len());
+    for i in idx..bool_array.len() {
+        bool_array[i] = true;
+    }
+
+    assert_eq!(two_crystal_balls(&bool_array), Some(idx));
+
+    for i in 0..bool_array.len() {
+        bool_array[i] = false;
+    }
+    assert_eq!(two_crystal_balls(&bool_array), None);
 }
 

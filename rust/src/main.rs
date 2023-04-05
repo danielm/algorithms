@@ -1,3 +1,5 @@
+#![allow(unused)]
+
 use rand::Rng;
 
 mod day1;

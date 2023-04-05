@@ -1,5 +1,5 @@
 import {expect, test} from '@jest/globals';
-import bubble_sort from '../src/bubble_sort';
+import { bubble_sort } from '../src/bubble_sort';
 
 test("bubble-sort", function () {
     const arr = [9, 3, 7, 4, 69, 420, 42];

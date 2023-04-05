@@ -1,5 +1,5 @@
 // BigO: O(n^2)
-export default function bubble_sort(arr: number[]): void {
+export function bubble_sort(arr: number[]): void {
   /*
    * So based on the coment below, these two loops are the ones that cause squared algorithm,
    * because we ar going over the length of the array, en every time we go over we go over again
